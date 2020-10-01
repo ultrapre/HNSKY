@@ -1,0 +1,91 @@
+object planetform: Tplanetform
+  Left = 747
+  Height = 210
+  Top = 138
+  Width = 534
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'planetform'
+  ClientHeight = 210
+  ClientWidth = 534
+  Color = clBtnFace
+  KeyPreview = True
+  OnActivate = FormActivate
+  OnKeyPress = FormKeyPress
+  OnPaint = FormPaint
+  Position = poOwnerFormCenter
+  LCLVersion = '2.0.6.0'
+  object bevel_time: TBevel
+    Left = 73
+    Height = 22
+    Hint = 'Local time from 17:45 in the evening till 06:15 in the morning.'
+    Top = 4
+    Width = 456
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object bevel_planet: TBevel
+    Left = 6
+    Height = 145
+    Hint = 'Planets.'
+    Top = 24
+    Width = 68
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object Bevel_main: TBevel
+    Left = 73
+    Height = 146
+    Hint = 'Yellow means visible, gray is twillight zone.'
+    Top = 25
+    Width = 456
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object help_planetmenu: TLabel
+    Cursor = crHandPoint
+    Left = 480
+    Height = 16
+    Hint = 'help'
+    Top = 185
+    Width = 7
+    Caption = '?'
+    Color = clBtnFace
+    Font.Color = clBlue
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsUnderline]
+    ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    Transparent = False
+    OnClick = help_planetmenuClick
+  end
+  object ok_button: TButton
+    Left = 152
+    Height = 24
+    Hint = 'Leave this window.'
+    Top = 177
+    Width = 98
+    Caption = 'Ok'
+    OnClick = ok_buttonClick
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+  end
+  object to_clipboard: TButton
+    Left = 305
+    Height = 24
+    Hint = 'Copy window to Windows clipboard.  (To paste it in your favourite wordprocessor or drawing program)'
+    Top = 177
+    Width = 104
+    Caption = 'To  clipboard'
+    OnClick = to_clipboardClick
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+  end
+end

@@ -1,0 +1,136 @@
+object indi: Tindi
+  Left = 734
+  Height = 546
+  Top = 355
+  Width = 884
+  HorzScrollBar.Page = 432
+  VertScrollBar.Page = 314
+  AutoScroll = True
+  Caption = 'Indi client'
+  ClientHeight = 546
+  ClientWidth = 884
+  OnCreate = FormCreate
+  LCLVersion = '1.9.0.0'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 432
+    Top = 29
+    Width = 884
+    Align = alClient
+    MultiLine = True
+    TabOrder = 0
+    Options = [nboMultiLine]
+  end
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 5
+    Top = 461
+    Width = 884
+    Align = alBottom
+    Beveled = True
+    ResizeAnchor = akBottom
+  end
+  object Memo1: TMemo
+    Left = 0
+    Height = 80
+    Top = 466
+    Width = 884
+    Align = alBottom
+    Constraints.MinHeight = 20
+    ScrollBars = ssAutoBoth
+    TabOrder = 1
+  end
+  object connect_indi_server_btn1: TBitBtn
+    Left = 72
+    Height = 25
+    Hint = 'Connect to the INDI server'
+    Top = 168
+    Width = 131
+    AutoSize = True
+    Caption = 'Connect INDI server'
+    OnClick = connect_indi_server_btn1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+  end
+  object no_indi_devices_available1: TLabel
+    Left = 72
+    Height = 15
+    Top = 128
+    Width = 183
+    Caption = 'No INDI devices available in server!'
+    ParentColor = False
+    Visible = False
+  end
+  object Splitter2: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 29
+    Top = 0
+    Width = 884
+    Align = alTop
+    Beveled = True
+    ResizeAnchor = akTop
+  end
+  object telescope_name_select2: TComboBox
+    Left = 0
+    Height = 23
+    Hint = 'Select here the INDI device or interest. To connect select the telescope in the settings menu. (Ctrl-E)'
+    Top = 0
+    Width = 390
+    Color = clMenu
+    ItemHeight = 15
+    OnChange = telescope_name_select2Change
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+    Text = 'telescope_name_select2'
+  end
+  object Panel1: TPanel
+    Left = 392
+    Height = 28
+    Top = 0
+    Width = 492
+    Alignment = taLeftJustify
+    Anchors = [akTop, akLeft, akRight]
+    ClientHeight = 28
+    ClientWidth = 492
+    TabOrder = 6
+    object show_full_indi_communication1: TCheckBox
+      Left = 248
+      Height = 19
+      Hint = 'Show full INDI communication. For debugging.'
+      Top = 0
+      Width = 183
+      Caption = 'Show full INDI communication'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+    object all_device_communication1: TCheckBox
+      Left = 8
+      Height = 19
+      Hint = 'If checked show communication of all devices.'
+      Top = 0
+      Width = 152
+      Caption = 'Show all communication'
+      OnChange = all_device_communication1Change
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+  end
+  object indi_client: TLTCPComponent
+    Host = 'localhost'
+    Port = 7624
+    OnReceive = indi_clientReceive
+    OnError = indi_clientError
+    OnDisconnect = indi_clientDisconnect
+    OnConnect = indi_clientConnect
+    Timeout = 0
+    ReuseAddress = True
+    left = 784
+    top = 64
+  end
+end

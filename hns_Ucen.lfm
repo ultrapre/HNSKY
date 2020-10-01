@@ -1,0 +1,359 @@
+object center_on: Tcenter_on
+  Left = 599
+  Height = 320
+  Hint = 'Search for anything. |For example enter Moon, Titan, Orion, M31, NGC253, 54471 (SAO or PPM), 0528.00919 (GSC).'
+  Top = 276
+  Width = 419
+  HelpType = htKeyword
+  ActiveControl = center1
+  AutoSize = True
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Center on:'
+  ClientHeight = 320
+  ClientWidth = 419
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDeactivate = FormDeactivate
+  OnPaint = FormPaint
+  OnShow = FormShow
+  ParentFont = True
+  ShowHint = True
+  LCLVersion = '2.0.10.0'
+  object help_searchmenu: TLabel
+    Cursor = crHandPoint
+    Left = 400
+    Height = 20
+    Hint = 'Help'
+    Top = 232
+    Width = 9
+    Caption = '?'
+    Font.Color = clBlue
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsUnderline]
+    ParentColor = False
+    ParentFont = False
+    OnClick = help_searchmenuClick
+  end
+  object go_to1: TBitBtn
+    Left = 264
+    Height = 26
+    Hint = 'Go to the selected object or apply the wildcard to the combobox list.'
+    Top = 294
+    Width = 72
+    Anchors = [akLeft, akBottom]
+    AutoSize = True
+    BorderSpacing.Bottom = 2
+    BorderSpacing.Around = 2
+    Caption = '&Goto'
+    Default = True
+    Glyph.Data = {
+      F6000000424DF600000000000000760000002800000010000000100000000100
+      0400000000008000000000000000000000000000000000000000000000000000
+      8000008000000080800080000000800080008080000080808000C0C0C0000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00DDDD7DDD7DDD
+      7DDDDDDDD7DD7DD7DDDDDDDDD7DD7DD7DDDDDDDDDD7D7D7DDDDDDDDDDD7D7D7D
+      DDDDDD7DDDD777DDDDDDD7D77DD777DDDDDDD7DDD77D7DDDDDDD7DDDDDD7DDDD
+      DDDD7DDDDDDD77DDDDDDD77DDDDDDD77DDDDDDD77DDDDDDD77DDDDDDD77DDDDD
+      DD7DDDDDDDD77DDDD7DDDDDDDDDDD77D7DDDDDDDDDDDDDD77DDD
+    }
+    GlyphShowMode = gsmSystem
+    OnClick = go_to1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+  end
+  object constellations1: TBitBtn
+    Left = 176
+    Height = 25
+    Hint = 'List all constellation names.'
+    Top = 0
+    Width = 101
+    AutoSize = True
+    BorderSpacing.Around = 2
+    Caption = '&Constellations'
+    Constraints.MinWidth = 100
+    OnClick = constellations1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+  end
+  object abb1: TBitBtn
+    Left = 315
+    Height = 25
+    Hint = 'List all constellation abbreviations.'
+    Top = 0
+    Width = 99
+    AutoSize = True
+    BorderSpacing.Around = 2
+    Caption = 'A&bbreviations'
+    OnClick = abb1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 4
+  end
+  object brightstars1: TBitBtn
+    Left = 176
+    Height = 25
+    Hint = 'List all bright star names.'
+    Top = 32
+    Width = 100
+    AutoSize = True
+    Caption = '&Stars'
+    Constraints.MinWidth = 100
+    OnClick = brightstars1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+  end
+  object comets1: TBitBtn
+    Left = 176
+    Height = 25
+    Hint = 'List all comet names. Wildcard in combobox will be applied.'
+    Top = 128
+    Width = 100
+    AutoSize = True
+    BorderSpacing.Around = 2
+    Caption = '&Comets'
+    Constraints.MinWidth = 100
+    OnClick = comets1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 12
+  end
+  object planets1: TBitBtn
+    Left = 176
+    Height = 25
+    Hint = 'List all planet and moon names.'
+    Top = 160
+    Width = 100
+    AutoSize = True
+    BorderSpacing.Around = 2
+    Caption = '&Planetary'
+    Constraints.MinWidth = 100
+    OnClick = planets1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 13
+  end
+  object center1: TCheckBox
+    Left = 181
+    Height = 19
+    Hint = 'If selected center on else  mark only and display the information of the object.'
+    Top = 243
+    Width = 55
+    BorderSpacing.Around = 2
+    Caption = 'C&enter'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 18
+  end
+  object edit1: TEdit
+    Left = 0
+    Height = 23
+    Hint = 'Enter here any name|Enter here any star number or NGC/IC object.  For stars only there number. Wildcards are possible.'
+    Top = 0
+    Width = 172
+    OnDblClick = edit1DblClick
+    OnKeyPress = edit1KeyPress
+    ParentColor = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+  end
+  object Cancel1: TBitBtn
+    Left = 352
+    Height = 25
+    Hint = 'Leave without any action.'
+    Top = 295
+    Width = 62
+    Anchors = [akLeft, akBottom]
+    AutoSize = True
+    BorderSpacing.Bottom = 5
+    BorderSpacing.Around = 2
+    Cancel = True
+    Caption = '&Cancel'
+    OnClick = Cancel1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+  end
+  object asteroids1: TBitBtn
+    Left = 176
+    Height = 25
+    Hint = 'List all asteroid names. Wildcard in combobox will be applied.'
+    Top = 96
+    Width = 100
+    AutoSize = True
+    BorderSpacing.Around = 2
+    Caption = 'Asteroids'
+    Constraints.MinWidth = 100
+    OnClick = asteroids1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 11
+  end
+  object autozoom1: TCheckBox
+    Left = 181
+    Height = 19
+    Hint = 'If found, adjust zoom to get object within range.'
+    Top = 222
+    Width = 79
+    BorderSpacing.Around = 2
+    Caption = 'Auto &zoom'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 17
+  end
+  object Supp1: TBitBtn
+    Left = 176
+    Height = 25
+    Hint = 'List all names of the supplement. Wildcard in combobox will be applied.'
+    Top = 64
+    Width = 100
+    AutoSize = True
+    BorderSpacing.Around = 2
+    Caption = 'Supp-1'
+    Constraints.MinWidth = 100
+    OnClick = SuppClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 6
+  end
+  object Supp2: TBitBtn
+    Left = 280
+    Height = 25
+    Hint = 'List all names of the supplement. Wildcard in combobox will be applied.'
+    Top = 64
+    Width = 32
+    AutoSize = True
+    BorderSpacing.Around = 2
+    Caption = '&2'
+    OnClick = SuppClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 7
+  end
+  object deepsky1: TBitBtn
+    Left = 176
+    Height = 25
+    Hint = 'List the items of the deepsky database up to level 1. Wildcard in combobox will be applied.'
+    Top = 192
+    Width = 100
+    AutoSize = True
+    Caption = '&Deep-sky-1'
+    Constraints.MinWidth = 100
+    OnClick = deepsky1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 14
+  end
+  object supp3: TBitBtn
+    Left = 313
+    Height = 25
+    Hint = 'List all names of the supplement. Wildcard in combobox will be applied.'
+    Top = 64
+    Width = 32
+    AutoSize = True
+    BorderSpacing.Around = 2
+    Caption = '&3'
+    OnClick = SuppClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 8
+  end
+  object supp4: TBitBtn
+    Left = 346
+    Height = 25
+    Hint = 'List all names of the supplement. Wildcard in combobox will be applied.'
+    Top = 64
+    Width = 32
+    AutoSize = True
+    BorderSpacing.Around = 2
+    Caption = '&4'
+    OnClick = SuppClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 9
+  end
+  object supp5: TBitBtn
+    Left = 379
+    Height = 25
+    Hint = 'List all names of the supplement. Wildcard in combobox will be applied.'
+    Top = 64
+    Width = 32
+    AutoSize = True
+    BorderSpacing.Around = 2
+    Caption = '&5'
+    OnClick = SuppClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 10
+  end
+  object ListBox1: TListBox
+    Left = 0
+    Height = 280
+    Top = 32
+    Width = 172
+    ItemHeight = 0
+    OnClick = ListBox1Click
+    OnDblClick = ListBox1DblClick
+    OnKeyPress = ListBox1KeyPress
+    ParentColor = True
+    ScrollWidth = 150
+    Sorted = True
+    TabOrder = 19
+  end
+  object deepsky2: TBitBtn
+    Left = 280
+    Height = 25
+    Hint = 'List the items of the deepsky database up to level 2. Wildcard in combobox will be applied.'
+    Top = 192
+    Width = 32
+    AutoSize = True
+    Caption = '2'
+    OnClick = deepsky1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 15
+  end
+  object deepsky3: TBitBtn
+    Left = 313
+    Height = 25
+    Hint = 'List the items of the deepsky database up to level 3. Wildcard in combobox will be applied..'
+    Top = 192
+    Width = 32
+    AutoSize = True
+    Caption = '3'
+    OnClick = deepsky1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 16
+  end
+  object search_simbad1: TBitBtn
+    Left = 315
+    Height = 25
+    Hint = 'Query the Simbad online database'
+    Top = 232
+    Width = 66
+    AutoSize = True
+    Caption = 'Simbad'
+    OnClick = search_simbad1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 20
+  end
+  object slewto1: TCheckBox
+    Left = 181
+    Height = 19
+    Hint = 'If the telescope mount is connected, slew to the object. To follow in the map, set in the telescope pop-up menu the option "track telescope".'
+    Top = 264
+    Width = 58
+    BorderSpacing.Around = 2
+    Caption = 'Slew to'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 21
+  end
+end

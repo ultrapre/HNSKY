@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="40">
+      <Unit0>
+        <Filename Value="hnsky.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="63" Y="8"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="hns_Udownload.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="38" Y="49"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="hns_indi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="indi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16" Y="2"/>
+        <UsageCount Value="209"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="hns_U290.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="22"/>
+        <CursorPos X="20" Y="34"/>
+        <UsageCount Value="207"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="hns_Userver.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="33"/>
+        <CursorPos Y="34"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="hns_main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="mainwindow"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="4111"/>
+        <CursorPos X="5" Y="4131"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="hns_Uset.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Settings"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="162" Y="9"/>
+        <UsageCount Value="427"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="hns_Uedi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="edit2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="304"/>
+        <CursorPos X="56" Y="348"/>
+        <UsageCount Value="201"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="hns_Unon.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="452"/>
+        <CursorPos X="31" Y="471"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="ppmtext.txt"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="25"/>
+        <CursorPos X="19" Y="44"/>
+        <UsageCount Value="278"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="text.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="27" Y="2"/>
+        <UsageCount Value="210"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="text1.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="89" Y="6"/>
+        <UsageCount Value="192"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\rtl\objpas\sysutils\datih.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="173"/>
+        <CursorPos X="21" Y="188"/>
+        <UsageCount Value="5419"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\temp\skychart-3.11-3271-src\skychart-3.11-3271-src\skychart\component\synapse\source\lib\synautil.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="13"/>
+        <CursorPos X="22" Y="108"/>
+        <UsageCount Value="856"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="hns_Uast.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="200"/>
+        <CursorPos Y="221"/>
+        <UsageCount Value="912"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="hns_Utim.pas"/>
+        <ComponentName Value="Settime"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="4" Y="17"/>
+        <UsageCount Value="82"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="hns_Ucen.pas"/>
+        <ComponentName Value="center_on"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="4" Y="17"/>
+        <UsageCount Value="52"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="hns_Upla.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="197"/>
+        <CursorPos X="67" Y="199"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="hns_Uobj.pas"/>
+        <ComponentName Value="objectmenu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="285"/>
+        <CursorPos X="39" Y="290"/>
+        <UsageCount Value="98"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="hns_Uani.pas"/>
+        <ComponentName Value="animation"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="31"/>
+        <UsageCount Value="16"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="hns_Ugot.pas"/>
+        <ComponentName Value="move_to"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="4" Y="17"/>
+        <UsageCount Value="38"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="hns_Utxt.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="3"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="hns_Utxt.pas"/>
+        <ComponentName Value="Search_results"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="4" Y="17"/>
+        <UsageCount Value="19"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="hns_Usno.pas"/>
+        <UnitName Value="hns_usno"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16" Y="2"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="hns_Uedi.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="658"/>
+        <CursorPos X="7" Y="667"/>
+        <UsageCount Value="3"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="hns_Uobj.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="484"/>
+        <CursorPos Y="516"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="hns_Uinp.pas"/>
+        <ComponentName Value="edit_supplement_entry"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="4" Y="18"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="source_hnsky_FPC_-03-06-2018 400L3\hns_Uast.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1706"/>
+        <CursorPos X="91" Y="1729"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="C:\astap.fpc\astap_main.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="3963"/>
+        <CursorPos X="25" Y="3972"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="hns_main.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="hns_Ucon.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="4" Y="17"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="hns_Udrk.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="4" Y="17"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="hns_Ugsc.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="4" Y="18"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="hns_Upol.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="4" Y="17"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="hns_Uprs.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="15"/>
+        <CursorPos X="2" Y="29"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="hns_Usol.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="4" Y="17"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="source_hnsky_FPC_-15-08-2018\hns_Userver.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="43"/>
+        <CursorPos X="10" Y="75"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="source_hnsky_FPC_-15-08-2018\hns_main.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="19" Y="21"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="C:\astap.fpc\unit_stack.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="C:\astap.fpc\unit_plate_solving.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="71"/>
+        <CursorPos X="69" Y="82"/>
+        <UsageCount Value="17"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit39>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="8886" Column="44" TopLine="8856"/>
+      </Position1>
+      <Position2>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9907" Column="9" TopLine="9876"/>
+      </Position2>
+      <Position3>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9913" Column="23" TopLine="9900"/>
+      </Position3>
+      <Position4>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9920" Column="40" TopLine="9900"/>
+      </Position4>
+      <Position5>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9930" Column="86" TopLine="9900"/>
+      </Position5>
+      <Position6>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9934" Column="13" TopLine="9904"/>
+      </Position6>
+      <Position7>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9935" Column="48" TopLine="9905"/>
+      </Position7>
+      <Position8>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9936" Column="49" TopLine="9906"/>
+      </Position8>
+      <Position9>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9946" Column="11" TopLine="9916"/>
+      </Position9>
+      <Position10>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9951" Column="23" TopLine="9921"/>
+      </Position10>
+      <Position11>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9969" Column="57" TopLine="9939"/>
+      </Position11>
+      <Position12>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9996" Column="12" TopLine="9966"/>
+      </Position12>
+      <Position13>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9998" Column="9" TopLine="9968"/>
+      </Position13>
+      <Position14>
+        <Filename Value="hns_main.pas"/>
+        <Caret Line="9906" Column="35" TopLine="9896"/>
+      </Position14>
+      <Position15>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="52" Column="29" TopLine="43"/>
+      </Position15>
+      <Position16>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="814" Column="20" TopLine="779"/>
+      </Position16>
+      <Position17>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="832" Column="13" TopLine="797"/>
+      </Position17>
+      <Position18>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="868" Column="18" TopLine="833"/>
+      </Position18>
+      <Position19>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="965" Column="40" TopLine="930"/>
+      </Position19>
+      <Position20>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="34" Column="20" TopLine="13"/>
+      </Position20>
+      <Position21>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="814" Column="20" TopLine="779"/>
+      </Position21>
+      <Position22>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="832" Column="13" TopLine="797"/>
+      </Position22>
+      <Position23>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="868" Column="18" TopLine="833"/>
+      </Position23>
+      <Position24>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="965" Column="40" TopLine="930"/>
+      </Position24>
+      <Position25>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="34" Column="20" TopLine="13"/>
+      </Position25>
+      <Position26>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="814" Column="20" TopLine="779"/>
+      </Position26>
+      <Position27>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="832" Column="13" TopLine="797"/>
+      </Position27>
+      <Position28>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="868" Column="18" TopLine="833"/>
+      </Position28>
+      <Position29>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="965" Column="40" TopLine="930"/>
+      </Position29>
+      <Position30>
+        <Filename Value="hns_U290.pas"/>
+        <Caret Line="34" Column="20" TopLine="22"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="hns_main.pas"/>
+        <Line Value="12032"/>
+      </Item1>
+    </BreakPoints>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="orientation2"/>
+      </Item1>
+    </Watches>
+  </Debugging>
+</CONFIG>

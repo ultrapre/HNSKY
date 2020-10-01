@@ -1,0 +1,91 @@
+object starsize: Tstarsize
+  Left = 192
+  Top = 116
+  BorderStyle = bsDialog
+  Caption = 'Star size'
+  ClientHeight = 237
+  ClientWidth = 271
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 120
+  TextHeight = 16
+  object TrackBar1: TTrackBar
+    Left = 32
+    Top = 8
+    Width = 150
+    Height = 45
+    Orientation = trHorizontal
+    Frequency = 1
+    Position = 0
+    SelEnd = 0
+    SelStart = 0
+    TabOrder = 0
+    ThumbLength = 20
+    TickMarks = tmBottomRight
+    TickStyle = tsAuto
+  end
+  object TrackBar2: TTrackBar
+    Left = 32
+    Top = 64
+    Width = 150
+    Height = 45
+    Orientation = trHorizontal
+    Frequency = 1
+    Position = 0
+    SelEnd = 0
+    SelStart = 0
+    TabOrder = 1
+    ThumbLength = 20
+    TickMarks = tmBottomRight
+    TickStyle = tsAuto
+  end
+  object Ok: TBitBtn
+    Left = 48
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Ok'
+    TabOrder = 2
+    OnClick = OkClick
+  end
+  object Cancel: TBitBtn
+    Left = 160
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Cancel'
+    TabOrder = 3
+    OnClick = CancelClick
+  end
+  object TrackBar4: TTrackBar
+    Left = 32
+    Top = 232
+    Width = 150
+    Height = 45
+    Orientation = trHorizontal
+    Frequency = 1
+    Position = 0
+    SelEnd = 0
+    SelStart = 0
+    TabOrder = 4
+    ThumbLength = 20
+    TickMarks = tmBottomRight
+    TickStyle = tsAuto
+  end
+  object SpinEdit1: TSpinEdit
+    Left = 48
+    Top = 136
+    Width = 121
+    Height = 26
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 5
+    Value = 0
+  end
+end

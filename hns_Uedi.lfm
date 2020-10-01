@@ -1,0 +1,1031 @@
+object edit2: Tedit2
+  Left = 371
+  Height = 291
+  Top = 196
+  Width = 1112
+  Caption = 'Hallo Northern Sky editor.'
+  ClientHeight = 271
+  ClientWidth = 1112
+  KeyPreview = True
+  Menu = MainMenu1
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDeactivate = FormDeactivate
+  OnDestroy = FormDestroy
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  ParentFont = True
+  Position = poOwnerFormCenter
+  LCLVersion = '2.0.10.0'
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 245
+    Width = 1112
+    Align = alBottom
+    Caption = 'ToolBar1'
+    TabOrder = 0
+    Visible = False
+    object find2: TLabel
+      Left = 1
+      Height = 15
+      Top = 2
+      Width = 100
+      Alignment = taRightJustify
+      BorderSpacing.Around = 5
+      Caption = 'Find: '
+      Constraints.MinWidth = 100
+      ParentColor = False
+    end
+    object findtext1: TEdit
+      Left = 109
+      Height = 23
+      Top = 2
+      Width = 150
+      BorderSpacing.Around = 5
+      ParentColor = True
+      TabOrder = 0
+    end
+    object replace2: TLabel
+      Left = 259
+      Height = 15
+      Top = 2
+      Width = 100
+      Alignment = taRightJustify
+      BorderSpacing.Around = 5
+      Caption = 'Replace:'
+      Constraints.MinWidth = 100
+      ParentColor = False
+    end
+    object replacetext1: TEdit
+      Left = 367
+      Height = 23
+      Top = 2
+      Width = 150
+      BorderSpacing.Around = 5
+      ParentColor = True
+      TabOrder = 1
+    end
+    object find1: TButton
+      Left = 517
+      Height = 22
+      Hint = 'Find from cursor position. For find next click again.'
+      Top = 2
+      Width = 100
+      BorderSpacing.Left = 10
+      BorderSpacing.Right = 10
+      Caption = 'Find'
+      OnClick = findClick1
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+    end
+    object replace1: TButton
+      Left = 617
+      Height = 22
+      Hint = 'Replace from cursor position. For next replace click again.'
+      Top = 2
+      Width = 100
+      Caption = 'Replace'
+      OnClick = replace1Click
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+    end
+    object replace_all1: TButton
+      Left = 717
+      Height = 22
+      Top = 2
+      Width = 100
+      Caption = 'Replace all'
+      OnClick = replace_all1Click
+      TabOrder = 4
+    end
+    object ToolButton1: TToolButton
+      Left = 101
+      Height = 22
+      Top = 2
+      Caption = 'ToolButton1'
+      ImageIndex = 35
+      Style = tbsSeparator
+    end
+    object ToolButton2: TToolButton
+      Left = 359
+      Height = 22
+      Top = 2
+      Caption = 'ToolButton2'
+      ImageIndex = 35
+      Style = tbsSeparator
+    end
+  end
+  object Label1: TLabel
+    Left = 89
+    Height = 15
+    Top = 43
+    Width = 34
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  inline synedit1: TSynEdit
+    Left = 0
+    Height = 245
+    Top = 0
+    Width = 1112
+    Align = alClient
+    Font.Height = -13
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqNonAntialiased
+    ParentColor = False
+    ParentFont = False
+    PopupMenu = PopupMenu1
+    TabOrder = 1
+    OnKeyPress = synedit1KeyPress
+    Gutter.Width = 57
+    Gutter.MouseActions = <>
+    RightGutter.Width = 0
+    RightGutter.MouseActions = <>
+    Keystrokes = <    
+      item
+        Command = ecUp
+        ShortCut = 38
+      end    
+      item
+        Command = ecSelUp
+        ShortCut = 8230
+      end    
+      item
+        Command = ecScrollUp
+        ShortCut = 16422
+      end    
+      item
+        Command = ecDown
+        ShortCut = 40
+      end    
+      item
+        Command = ecSelDown
+        ShortCut = 8232
+      end    
+      item
+        Command = ecScrollDown
+        ShortCut = 16424
+      end    
+      item
+        Command = ecLeft
+        ShortCut = 37
+      end    
+      item
+        Command = ecSelLeft
+        ShortCut = 8229
+      end    
+      item
+        Command = ecWordLeft
+        ShortCut = 16421
+      end    
+      item
+        Command = ecSelWordLeft
+        ShortCut = 24613
+      end    
+      item
+        Command = ecRight
+        ShortCut = 39
+      end    
+      item
+        Command = ecSelRight
+        ShortCut = 8231
+      end    
+      item
+        Command = ecWordRight
+        ShortCut = 16423
+      end    
+      item
+        Command = ecSelWordRight
+        ShortCut = 24615
+      end    
+      item
+        Command = ecPageDown
+        ShortCut = 34
+      end    
+      item
+        Command = ecSelPageDown
+        ShortCut = 8226
+      end    
+      item
+        Command = ecPageBottom
+        ShortCut = 16418
+      end    
+      item
+        Command = ecSelPageBottom
+        ShortCut = 24610
+      end    
+      item
+        Command = ecPageUp
+        ShortCut = 33
+      end    
+      item
+        Command = ecSelPageUp
+        ShortCut = 8225
+      end    
+      item
+        Command = ecPageTop
+        ShortCut = 16417
+      end    
+      item
+        Command = ecSelPageTop
+        ShortCut = 24609
+      end    
+      item
+        Command = ecLineStart
+        ShortCut = 36
+      end    
+      item
+        Command = ecSelLineStart
+        ShortCut = 8228
+      end    
+      item
+        Command = ecEditorTop
+        ShortCut = 16420
+      end    
+      item
+        Command = ecSelEditorTop
+        ShortCut = 24612
+      end    
+      item
+        Command = ecLineEnd
+        ShortCut = 35
+      end    
+      item
+        Command = ecSelLineEnd
+        ShortCut = 8227
+      end    
+      item
+        Command = ecEditorBottom
+        ShortCut = 16419
+      end    
+      item
+        Command = ecSelEditorBottom
+        ShortCut = 24611
+      end    
+      item
+        Command = ecToggleMode
+        ShortCut = 45
+      end    
+      item
+        Command = ecCopy
+        ShortCut = 16429
+      end    
+      item
+        Command = ecPaste
+        ShortCut = 8237
+      end    
+      item
+        Command = ecDeleteChar
+        ShortCut = 46
+      end    
+      item
+        Command = ecCut
+        ShortCut = 8238
+      end    
+      item
+        Command = ecDeleteLastChar
+        ShortCut = 8
+      end    
+      item
+        Command = ecDeleteLastChar
+        ShortCut = 8200
+      end    
+      item
+        Command = ecDeleteLastWord
+        ShortCut = 16392
+      end    
+      item
+        Command = ecUndo
+        ShortCut = 32776
+      end    
+      item
+        Command = ecRedo
+        ShortCut = 40968
+      end    
+      item
+        Command = ecLineBreak
+        ShortCut = 13
+      end    
+      item
+        Command = ecSelectAll
+        ShortCut = 16449
+      end    
+      item
+        Command = ecCopy
+        ShortCut = 16451
+      end    
+      item
+        Command = ecBlockIndent
+        ShortCut = 24649
+      end    
+      item
+        Command = ecLineBreak
+        ShortCut = 16461
+      end    
+      item
+        Command = ecInsertLine
+        ShortCut = 16462
+      end    
+      item
+        Command = ecDeleteWord
+        ShortCut = 16468
+      end    
+      item
+        Command = ecBlockUnindent
+        ShortCut = 24661
+      end    
+      item
+        Command = ecPaste
+        ShortCut = 16470
+      end    
+      item
+        Command = ecCut
+        ShortCut = 16472
+      end    
+      item
+        Command = ecDeleteLine
+        ShortCut = 16473
+      end    
+      item
+        Command = ecDeleteEOL
+        ShortCut = 24665
+      end    
+      item
+        Command = ecUndo
+        ShortCut = 16474
+      end    
+      item
+        Command = ecRedo
+        ShortCut = 24666
+      end    
+      item
+        Command = ecGotoMarker0
+        ShortCut = 16432
+      end    
+      item
+        Command = ecGotoMarker1
+        ShortCut = 16433
+      end    
+      item
+        Command = ecGotoMarker2
+        ShortCut = 16434
+      end    
+      item
+        Command = ecGotoMarker3
+        ShortCut = 16435
+      end    
+      item
+        Command = ecGotoMarker4
+        ShortCut = 16436
+      end    
+      item
+        Command = ecGotoMarker5
+        ShortCut = 16437
+      end    
+      item
+        Command = ecGotoMarker6
+        ShortCut = 16438
+      end    
+      item
+        Command = ecGotoMarker7
+        ShortCut = 16439
+      end    
+      item
+        Command = ecGotoMarker8
+        ShortCut = 16440
+      end    
+      item
+        Command = ecGotoMarker9
+        ShortCut = 16441
+      end    
+      item
+        Command = ecSetMarker0
+        ShortCut = 24624
+      end    
+      item
+        Command = ecSetMarker1
+        ShortCut = 24625
+      end    
+      item
+        Command = ecSetMarker2
+        ShortCut = 24626
+      end    
+      item
+        Command = ecSetMarker3
+        ShortCut = 24627
+      end    
+      item
+        Command = ecSetMarker4
+        ShortCut = 24628
+      end    
+      item
+        Command = ecSetMarker5
+        ShortCut = 24629
+      end    
+      item
+        Command = ecSetMarker6
+        ShortCut = 24630
+      end    
+      item
+        Command = ecSetMarker7
+        ShortCut = 24631
+      end    
+      item
+        Command = ecSetMarker8
+        ShortCut = 24632
+      end    
+      item
+        Command = ecSetMarker9
+        ShortCut = 24633
+      end    
+      item
+        Command = EcFoldLevel1
+        ShortCut = 41009
+      end    
+      item
+        Command = EcFoldLevel2
+        ShortCut = 41010
+      end    
+      item
+        Command = EcFoldLevel3
+        ShortCut = 41011
+      end    
+      item
+        Command = EcFoldLevel4
+        ShortCut = 41012
+      end    
+      item
+        Command = EcFoldLevel5
+        ShortCut = 41013
+      end    
+      item
+        Command = EcFoldLevel6
+        ShortCut = 41014
+      end    
+      item
+        Command = EcFoldLevel7
+        ShortCut = 41015
+      end    
+      item
+        Command = EcFoldLevel8
+        ShortCut = 41016
+      end    
+      item
+        Command = EcFoldLevel9
+        ShortCut = 41017
+      end    
+      item
+        Command = EcFoldLevel0
+        ShortCut = 41008
+      end    
+      item
+        Command = EcFoldCurrent
+        ShortCut = 41005
+      end    
+      item
+        Command = EcUnFoldCurrent
+        ShortCut = 41003
+      end    
+      item
+        Command = EcToggleMarkupWord
+        ShortCut = 32845
+      end    
+      item
+        Command = ecNormalSelect
+        ShortCut = 24654
+      end    
+      item
+        Command = ecColumnSelect
+        ShortCut = 24643
+      end    
+      item
+        Command = ecLineSelect
+        ShortCut = 24652
+      end    
+      item
+        Command = ecTab
+        ShortCut = 9
+      end    
+      item
+        Command = ecShiftTab
+        ShortCut = 8201
+      end    
+      item
+        Command = ecMatchBracket
+        ShortCut = 24642
+      end    
+      item
+        Command = ecColSelUp
+        ShortCut = 40998
+      end    
+      item
+        Command = ecColSelDown
+        ShortCut = 41000
+      end    
+      item
+        Command = ecColSelLeft
+        ShortCut = 40997
+      end    
+      item
+        Command = ecColSelRight
+        ShortCut = 40999
+      end    
+      item
+        Command = ecColSelPageDown
+        ShortCut = 40994
+      end    
+      item
+        Command = ecColSelPageBottom
+        ShortCut = 57378
+      end    
+      item
+        Command = ecColSelPageUp
+        ShortCut = 40993
+      end    
+      item
+        Command = ecColSelPageTop
+        ShortCut = 57377
+      end    
+      item
+        Command = ecColSelLineStart
+        ShortCut = 40996
+      end    
+      item
+        Command = ecColSelLineEnd
+        ShortCut = 40995
+      end    
+      item
+        Command = ecColSelEditorTop
+        ShortCut = 57380
+      end    
+      item
+        Command = ecColSelEditorBottom
+        ShortCut = 57379
+      end>
+    MouseActions = <>
+    MouseTextActions = <>
+    MouseSelActions = <>
+    Lines.Strings = (
+      'synedit1'
+    )
+    VisibleSpecialChars = [vscSpace, vscTabAtLast]
+    ScrollBars = ssAutoBoth
+    SelectedColor.BackPriority = 50
+    SelectedColor.ForePriority = 50
+    SelectedColor.FramePriority = 50
+    SelectedColor.BoldPriority = 50
+    SelectedColor.ItalicPriority = 50
+    SelectedColor.UnderlinePriority = 50
+    SelectedColor.StrikeOutPriority = 50
+    BracketHighlightStyle = sbhsBoth
+    BracketMatchColor.Background = clNone
+    BracketMatchColor.Foreground = clNone
+    BracketMatchColor.Style = [fsBold]
+    FoldedCodeColor.Background = clNone
+    FoldedCodeColor.Foreground = clGray
+    FoldedCodeColor.FrameColor = clGray
+    MouseLinkColor.Background = clNone
+    MouseLinkColor.Foreground = clBlue
+    LineHighlightColor.Background = clNone
+    LineHighlightColor.Foreground = clNone
+    OnStatusChange = synedit1StatusChange
+    inline SynLeftGutterPartList1: TSynGutterPartList
+      object SynGutterMarks1: TSynGutterMarks
+        Width = 24
+        MouseActions = <>
+      end
+      object SynGutterLineNumber1: TSynGutterLineNumber
+        Width = 17
+        MouseActions = <>
+        MarkupInfo.Background = clBtnFace
+        MarkupInfo.Foreground = clNone
+        DigitCount = 2
+        ShowOnlyLineNumbersMultiplesOf = 1
+        ZeroStart = False
+        LeadingZeros = False
+      end
+      object SynGutterChanges1: TSynGutterChanges
+        Width = 4
+        MouseActions = <>
+        ModifiedColor = 59900
+        SavedColor = clGreen
+      end
+      object SynGutterSeparator1: TSynGutterSeparator
+        Width = 2
+        MouseActions = <>
+        MarkupInfo.Background = clWhite
+        MarkupInfo.Foreground = clGray
+      end
+      object SynGutterCodeFolding1: TSynGutterCodeFolding
+        AutoSize = False
+        MouseActions = <>
+        MarkupInfo.Background = clNone
+        MarkupInfo.Foreground = clGray
+        MouseActionsExpanded = <>
+        MouseActionsCollapsed = <>
+      end
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 80
+    Top = 24
+    object File1: TMenuItem
+      Caption = '&File'
+      Hint = ' '
+      object Save1: TMenuItem
+        Caption = '&Save'
+        Hint = ' '
+        ShortCut = 16467
+        OnClick = Save1Click
+      end
+      object Saveas1: TMenuItem
+        Caption = 'Save as'
+        Hint = ' '
+        OnClick = Saveas1Click
+      end
+      object Load1: TMenuItem
+        Caption = '&Load'
+        Hint = ' '
+        ShortCut = 16463
+        OnClick = Load1Click
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Exit1: TMenuItem
+        Caption = '&Exit'
+        Hint = ' '
+        ShortCut = 16465
+        OnClick = Exit1Click
+      end
+    end
+    object Edit1: TMenuItem
+      Caption = '&Edit'
+      Hint = ' '
+      object Cut1: TMenuItem
+        Caption = '&Cut'
+        ShortCut = 16472
+        OnClick = Cut1Click
+      end
+      object Copy1: TMenuItem
+        Caption = '&Copy'
+        ShortCut = 16451
+        OnClick = Copy1Click
+      end
+      object Paste1: TMenuItem
+        Caption = '&Paste'
+        ShortCut = 16470
+        OnClick = Paste1Click
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object Undo1: TMenuItem
+        Caption = 'Undo'
+        ShortCut = 16474
+        OnClick = Undo1Click
+      end
+      object Selectall1: TMenuItem
+        Caption = 'Select all'
+        ShortCut = 16449
+        OnClick = Selectall1Click
+      end
+    end
+    object Checksyntax1: TMenuItem
+      Caption = 'C&heck'
+      Hint = ' '
+      ShortCut = 16456
+      OnClick = Checksyntax1Click
+    end
+    object Search1: TMenuItem
+      Caption = '&Search'
+      Hint = ' '
+      ShortCut = 16454
+      OnClick = Search1Click
+    end
+    object Tools1: TMenuItem
+      Caption = 'Tools'
+      Hint = ' '
+      object Numericalintegration1: TMenuItem
+        Caption = 'Numerical integration to current epoch'
+        Enabled = False
+        Hint = 'Numerical integration of perturbated orbits to current epoch. Select lines to be integrated.'
+        OnClick = Numericalintegration1Click
+      end
+      object Updatefrominternet1: TMenuItem
+        Caption = 'Update from internet'
+        Enabled = False
+        Hint = 'Update this file from internet.'
+        OnClick = Updatefrominternet1Click
+      end
+      object MenuItem1: TMenuItem
+        Caption = '-'
+      end
+      object JPLOrbitalelementsconversion1: TMenuItem
+        Caption = 'Paste JPL orbital elements converted'
+        Enabled = False
+        Hint = 'Copy first the complete orbital elements output from JPL Horizons into the clipboard, then use this option to paste them in the editor. Required elements will be detected and converted to the internal format.'
+        ShortCut = 8278
+        OnClick = JPLOrbitalelementsconversion1Click
+      end
+      object MenuItem2: TMenuItem
+        Caption = '-'
+      end
+      object Paste_supplement_lines1: TMenuItem
+        Caption = 'Paste list of objects as supplement lines. (using current deepsky database(s))'
+        Hint = 'Append the current supplement with the copied object list updated with info from current database(s). Copy first a raw list of objects. Duplicates are ignored'
+        ShortCut = 24662
+        OnClick = paste_supplement_labels1Click
+      end
+      object paste_supplement_labels1: TMenuItem
+        Caption = 'Paste list of objects as labels. (using current deepsky database(s))'
+        Hint = 'Append the current supplement with the copied object list as labels updated with info from current database(s). Copy first a raw list of objects. Duplicates are ignored'
+        ShortCut = 49238
+        OnClick = paste_supplement_labels1Click
+      end
+    end
+    object Font1: TMenuItem
+      Caption = 'F&ont'
+      Hint = ' '
+      ShortCut = 16463
+      OnClick = Font1Click
+    end
+    object About1: TMenuItem
+      Caption = '&About'
+      Hint = ' '
+      OnClick = About1Click
+    end
+    object edithelp: TMenuItem
+      Caption = '?'
+      Hint = ' '
+      OnClick = edithelpClick
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = '*.*'
+    Options = [ofHideReadOnly, ofNoChangeDir, ofEnableSizing]
+    Left = 160
+    Top = 24
+  end
+  object SaveDialog1: TSaveDialog
+    FileName = 'hns_1com.dat'
+    Filter = 'HNSKY comet file|hns_1com.dat|HNSKY asteroid file|hns_1ast.dat||*.txt||*.*'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+    Left = 240
+    Top = 24
+  end
+  object FontDialog1: TFontDialog
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Courier New'
+    MinFontSize = 0
+    MaxFontSize = 0
+    Left = 360
+    Top = 24
+  end
+  object PopupMenu1: TPopupMenu
+    Images = ImageList_edit
+    Left = 80
+    Top = 112
+    object Selectall2: TMenuItem
+      Caption = 'Select all'
+      ImageIndex = 5
+      ShortCut = 16449
+      OnClick = Selectall2Click
+    end
+    object MenuItem4: TMenuItem
+      Caption = '-'
+    end
+    object Cut2: TMenuItem
+      Caption = 'Cut'
+      ImageIndex = 1
+      ShortCut = 16472
+      OnClick = Cut1Click
+    end
+    object Copy2: TMenuItem
+      Caption = 'Copy'
+      ImageIndex = 2
+      ShortCut = 16451
+      OnClick = Copy1Click
+    end
+    object Paste2: TMenuItem
+      Caption = 'Paste'
+      ImageIndex = 3
+      ShortCut = 16470
+      OnClick = Paste1Click
+    end
+    object N3: TMenuItem
+      Caption = '-'
+    end
+    object Numericalintegration2: TMenuItem
+      Caption = 'Numerical integration'
+      Enabled = False
+      Hint = 'Numerical integration of perturbated orbits to current epoch. Select lines to be integrated.'
+      OnClick = Numericalintegration1Click
+    end
+  end
+  object ImageList_edit: TImageList
+    Left = 168
+    Top = 128
+    Bitmap = {
+      4C69060000001000000010000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000808080FF8080
+      80FF808080FF000000000000000000000000808080FF808080FF808080FF0000
+      0000000000000000000000000000000000000000000000000000808080FFC0C0
+      C0FF808080FF000000000000000000000000808080FFC0C0C0FF808080FF0000
+      0000000000000000000000000000000000000000000000000000808080FFC0C0
+      C0FF808080FF000000000000000000000000808080FFC0C0C0FF808080FF0000
+      00000000000000000000000000000000000000000000808080FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FF00000000808080FFC0C0C0FFC0C0C0FFC0C0C0FF8080
+      80FF0000000000000000000000000000000000000000808080FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FF00000000808080FFC0C0C0FFC0C0C0FFC0C0C0FF8080
+      80FF00000000000000000000000000000000808080FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FF808080FF808080FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FF808080FF0000000000000000808080FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FF00000000808080FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FF00000000808080FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FF00000000808080FFC0C0C0FFC0C0C0FFC0C0C0FF8080
+      80FF808080FF808080FF00000000808080FF808080FF808080FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FF00000000808080FFC0C0C0FFC0C0C0FFC0C0C0FF8080
+      80FF0000000000000000000000000000000000000000808080FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FF00000000808080FFC0C0C0FFC0C0C0FFC0C0C0FF8080
+      80FF0000000000000000000000000000000000000000808080FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FF00000000808080FF808080FF808080FF808080FF8080
+      80FF0000000000000000000000000000000000000000808080FF808080FF8080
+      80FF808080FF808080FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000FF000000000000000000000000000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000FF000000000000000000000000000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000FF000000000000000000000000000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000FF000000FF00000000000000FF000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000FF00000000000000FF00000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000FF000000FF000000FF00000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FF0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000840000FF000000FF840000FF00000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000840000FF00000000840000FF840000FF840000FF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000840000FF840000FF840000FF00000000840000FF00000000000000008400
+      00FF000000000000000000000000000000000000000000000000000000008400
+      00FF0000000000000000840000FF00000000840000FF00000000000000008400
+      00FF000000000000000000000000000000000000000000000000000000008400
+      00FF0000000000000000840000FF00000000840000FF00000000000000008400
+      00FF000000000000000000000000000000000000000000000000000000008400
+      00FF0000000000000000840000FF0000000000000000840000FF840000FF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000840000FF840000FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+      00FF000000FF0000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFF000000FF000000FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFF000000FFFFFFFFFF000000FF000000000000000000000000000000000000
+      0000000000000000000000000000000000FFFFFFFFFF000000FF000000FFFFFF
+      FFFF000000FF800000FF800000FF800000FF800000FF800000FF800000FF0000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFF800000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000FF8000
+      00FF000000000000000000000000000000FFFFFFFFFF000000FF000000FF0000
+      00FF000000FF800000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000FFFFFF
+      FFFF800000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFF800000FFFFFFFFFF000000FF000000FFFFFFFFFF800000FF8000
+      00FF800000FF800000FF00000000000000FFFFFFFFFF000000FF000000FF0000
+      00FF000000FF800000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFF800000FF00000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFF800000FFFFFFFFFF000000FF000000FF000000FF000000FF0000
+      00FFFFFFFFFF800000FF00000000000000FF000000FF000000FF000000FF0000
+      00FF000000FF800000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFF800000FF00000000000000000000000000000000000000000000
+      000000000000800000FFFFFFFFFF000000FF000000FF000000FF000000FF0000
+      00FFFFFFFFFF800000FF00000000000000000000000000000000000000000000
+      000000000000800000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFF800000FF00000000000000000000000000000000000000000000
+      000000000000800000FF800000FF800000FF800000FF800000FF800000FF8000
+      00FF800000FF800000FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000FF000000FF000000FF000000FF0000000000000000000000000000
+      000000000000000000000000000000000000000000FF000000FF000000FF0000
+      00FF000000FF00FFFFFF00FFFFFF000000FF000000FF000000FF000000FF0000
+      00FF000000000000000000000000000000FF008080FF808080FF008080FF0000
+      00FF00FFFFFF000000FF000000FF00FFFFFF000000FF808080FF008080FF8080
+      80FF000000FF0000000000000000000000FF808080FF808080FF000000FFC0C0
+      C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FF000000FF808080FF0080
+      80FF000000FF0000000000000000000000FF008080FF808080FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF808080FF8080
+      80FF000000FF0000000000000000000000FF808080FF008080FF808080FF0080
+      80FF808080FF008080FF808080FF008080FF808080FF008080FF808080FF0080
+      80FF000000FF0000000000000000000000FF008080FF808080FF008080FF8080
+      80FF008080FF800000FF800000FF800000FF800000FF800000FF800000FF8000
+      00FF000000FF0000000000000000000000FF808080FF008080FF808080FF0080
+      80FF808080FF800000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+      00FF800000FF0000000000000000000000FF008080FF808080FF008080FF8080
+      80FF008080FF800000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+      00FFFFFFFFFF800000FF00000000000000FF808080FF008080FF808080FF0080
+      80FF808080FF800000FFFFFFFFFF800000FF800000FF800000FFFFFFFFFF8000
+      00FF800000FF800000FF800000FF000000FF008080FF808080FF008080FF8080
+      80FF008080FF800000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF800000FF000000FF808080FF008080FF808080FF0080
+      80FF808080FF800000FFFFFFFFFF800000FF800000FF800000FF800000FF8000
+      00FF800000FFFFFFFFFF800000FF00000000000000FF000000FF000000FF0000
+      00FF000000FF800000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF800000FF000000000000000000000000000000000000
+      000000000000800000FF800000FF800000FF800000FF800000FF800000FF8000
+      00FF800000FF800000FF800000FF000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00808080FF8080
+      80FF808080FFFF00FF00FF00FF00FF00FF00808080FF808080FF808080FFFF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00808080FFC0C0
+      C0FF808080FFFF00FF00FF00FF00FF00FF00808080FFC0C0C0FF808080FFFF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00808080FFC0C0
+      C0FF808080FFFF00FF00FF00FF00FF00FF00808080FFC0C0C0FF808080FFFF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00808080FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FFFF00FF00808080FFC0C0C0FFC0C0C0FFC0C0C0FF8080
+      80FFFF00FF00FF00FF00FF00FF00FF00FF00FF00FF00808080FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FFFF00FF00808080FFC0C0C0FFC0C0C0FFC0C0C0FF8080
+      80FFFF00FF00FF00FF00FF00FF00FF00FF00808080FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FF808080FF808080FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FF808080FFFF00FF00FF00FF00808080FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FFFF00FF00808080FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FFFF00FF00808080FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FFFF00FF00808080FFC0C0C0FFC0C0C0FFC0C0C0FF8080
+      80FF808080FF808080FFFF00FF00808080FF808080FF808080FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FFFF00FF00808080FFC0C0C0FFC0C0C0FFC0C0C0FF8080
+      80FFFF00FF00FF00FF00FF00FF00FF00FF00FF00FF00808080FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FFFF00FF00808080FFC0C0C0FFC0C0C0FFC0C0C0FF8080
+      80FFFF00FF00FF00FF00FF00FF00FF00FF00FF00FF00808080FFC0C0C0FFC0C0
+      C0FFC0C0C0FF808080FFFF00FF00808080FF808080FF808080FF808080FF8080
+      80FFFF00FF00FF00FF00FF00FF00FF00FF00FF00FF00808080FF808080FF8080
+      80FF808080FF808080FFFF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00808080FF808080FFFFFFFFFF8080
+      80FF808080FFFFFFFFFF808080FF808080FFFFFFFFFF808080FF808080FFFFFF
+      FFFF808080FF808080FF808080FFFF00FF00808080FFFF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00808080FFFF00FF00FFFFFFFFFF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FFFFFFFFFF00FF00808080FFFF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00808080FFFF00FF00808080FFFF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00808080FFFF00FF00FFFFFFFFFF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FFFFFFFFFF00FF00808080FFFF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00808080FFFF00FF00808080FFFF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00808080FFFF00FF00FFFFFFFFFF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FFFFFFFFFF00FF00808080FFFF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00808080FFFF00FF00808080FFFF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00808080FFFF00FF00FFFFFFFFFF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FFFFFFFFFF00FF00808080FFFF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00808080FF808080FF808080FF808080FFFF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00808080FF808080FF808080FF808080FFFFFFFFFF8080
+      80FF808080FFFFFFFFFF808080FF808080FFFFFFFFFF808080FF808080FFFFFF
+      FFFF808080FF808080FF808080FF808080FF808080FF808080FFFF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+      FF00FF00FF00FF00FF00FF00FF00
+    }
+  end
+end

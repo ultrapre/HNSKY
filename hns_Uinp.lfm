@@ -1,0 +1,270 @@
+object edit_supplement_entry: Tedit_supplement_entry
+  Left = 1159
+  Height = 302
+  Top = 238
+  Width = 337
+  AutoSize = True
+  Caption = '✎'
+  ClientHeight = 302
+  ClientWidth = 337
+  KeyPreview = True
+  OnActivate = FormActivate
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  ParentFont = True
+  LCLVersion = '1.9.0.0'
+  object name_str1: TLabel
+    Left = 0
+    Height = 17
+    Top = 48
+    Width = 100
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Name:'
+    Layout = tlCenter
+    ParentColor = False
+  end
+  object type_str1: TLabel
+    Left = 0
+    Height = 17
+    Top = 102
+    Width = 100
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Type:'
+    Layout = tlCenter
+    ParentColor = False
+  end
+  object bright_str1: TLabel
+    Left = 0
+    Height = 17
+    Top = 163
+    Width = 100
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Brightness:'
+    Layout = tlCenter
+    ParentColor = False
+  end
+  object length_str1: TLabel
+    Left = 0
+    Height = 27
+    Top = 208
+    Width = 100
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = '↔'
+    Font.Height = -24
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+  end
+  object width_str1: TLabel
+    Left = 0
+    Height = 27
+    Top = 182
+    Width = 100
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = '↕'
+    Font.Height = -24
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+  end
+  object pa_str1: TLabel
+    Left = 0
+    Height = 27
+    Top = 234
+    Width = 100
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = '↺'
+    Font.Height = -24
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+  end
+  object dec_str1: TLabel
+    Left = 17
+    Height = 15
+    Hint = 'J2000'
+    Top = 19
+    Width = 10
+    Caption = 'δ:'
+    ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object ra_str1: TLabel
+    Left = 16
+    Height = 15
+    Hint = 'J2000'
+    Top = 0
+    Width = 10
+    Caption = 'α:'
+    ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object magn_str1: TLabel
+    Left = 0
+    Height = 17
+    Top = 74
+    Width = 100
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Magnitude:'
+    Layout = tlCenter
+    ParentColor = False
+  end
+  object edit_name1: TEdit
+    Left = 110
+    Height = 23
+    Hint = 'Enter here up to three names as: name1/name2/name3'
+    Top = 45
+    Width = 220
+    BorderSpacing.Around = 5
+    ParentColor = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+  end
+  object edit_type1: TMemo
+    Left = 110
+    Height = 57
+    Hint = 'Type and describtion. Use a / or | as seperator.'
+    Top = 99
+    Width = 220
+    BorderSpacing.Around = 5
+    ParentColor = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+  end
+  object edit_brightness1: TEdit
+    Left = 110
+    Height = 23
+    Hint = 'Brightness [magnitude/arcmin²]. No value indicates a star. Negative values are for line drawing. -99 for label, -98 for label with hint.  '
+    Top = 160
+    Width = 220
+    BorderSpacing.Around = 5
+    ParentColor = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 4
+  end
+  object edit_length1: TEdit
+    Left = 110
+    Height = 23
+    Hint = 'Object length in arc min.'
+    Top = 187
+    Width = 220
+    BorderSpacing.Around = 5
+    ParentColor = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+  end
+  object edit_width1: TEdit
+    Left = 110
+    Height = 23
+    Hint = 'Object width in arc min'
+    Top = 214
+    Width = 220
+    BorderSpacing.Around = 5
+    ParentColor = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 6
+  end
+  object edit_pa1: TEdit
+    Left = 110
+    Height = 23
+    Hint = 'Position angle/ Orientation'
+    Top = 241
+    Width = 220
+    BorderSpacing.Around = 5
+    ParentColor = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 7
+  end
+  object ok_button1: TButton
+    Left = 8
+    Height = 25
+    Hint = 'Accept current values without savings.'
+    Top = 272
+    Width = 70
+    Caption = '&Ok'
+    OnClick = ok_button1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 8
+  end
+  object edit_magn1: TEdit
+    Left = 110
+    Height = 23
+    Hint = 'Magnitude'
+    Top = 72
+    Width = 220
+    BorderSpacing.Around = 5
+    ParentColor = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+  end
+  object save_button1: TButton
+    Left = 86
+    Height = 25
+    Hint = 'Save the corresponding supplement'
+    Top = 272
+    Width = 98
+    Caption = '&Save suppl'
+    OnClick = ok_button1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 9
+  end
+  object cancel_button1: TButton
+    Left = 192
+    Height = 25
+    Hint = 'Ignore all changes'
+    Top = 272
+    Width = 70
+    Caption = '&Cancel'
+    OnClick = cancel_button1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+  end
+  object remove_button1: TButton
+    Left = 264
+    Height = 25
+    Hint = 'Mark this entry as comment with ;$$$  in front'
+    Top = 8
+    Width = 60
+    Caption = '&Remove'
+    OnClick = ok_button1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 10
+  end
+  object help_suppl_edit1: TLabel
+    Left = 274
+    Height = 23
+    Hint = 'help'
+    Top = 272
+    Width = 8
+    Caption = '?'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -17
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsUnderline]
+    ParentColor = False
+    ParentFont = False
+    OnClick = help_suppl_edit1Click
+  end
+end

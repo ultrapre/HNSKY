@@ -1,0 +1,571 @@
+object form_animation: Tform_animation
+  Left = 736
+  Height = 436
+  Hint = ' '
+  Top = 243
+  Width = 289
+  AutoSize = True
+  BorderStyle = bsDialog
+  Caption = 'Animation'
+  ClientHeight = 436
+  ClientWidth = 289
+  FormStyle = fsStayOnTop
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnDeactivate = update_variables
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  ParentFont = True
+  PopupMode = pmAuto
+  LCLVersion = '2.0.6.0'
+  object help_animation: TLabel
+    Cursor = crHandPoint
+    Left = 256
+    Height = 21
+    Hint = 'Help'
+    Top = 408
+    Width = 7
+    Caption = '?'
+    Color = clBtnFace
+    Font.Color = clBlue
+    Font.Height = -16
+    Font.Style = [fsUnderline]
+    ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    Transparent = False
+    OnClick = help_animationClick
+  end
+  object time_step: TGroupBox
+    Left = 0
+    Height = 201
+    Hint = ' '
+    Top = 112
+    Width = 287
+    AutoSize = True
+    Caption = 'Time step:'
+    ClientHeight = 181
+    ClientWidth = 283
+    Constraints.MinWidth = 287
+    ParentShowHint = False
+    TabOrder = 1
+    object lengthmove: TLabel
+      Left = 224
+      Height = 15
+      Top = 96
+      Width = 7
+      Caption = 'X'
+      ParentColor = False
+    end
+    object backwards_one: TButton
+      Left = 0
+      Height = 27
+      Hint = 'One step backwards.'
+      Top = 44
+      Width = 35
+      Caption = '<'
+      OnClick = forwards_oneClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 6
+    end
+    object forwards_one: TButton
+      Left = 37
+      Height = 27
+      Hint = 'One step forwards.'
+      Top = 44
+      Width = 35
+      Caption = '>'
+      OnClick = forwards_oneClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 7
+    end
+    object unit_comboBox: TComboBox
+      Left = 113
+      Height = 23
+      Hint = 'Unit of step size. Draconic Moon, average ecliptic crossing (27.212220 days). Sidereal Moon, average star crossing (27.321661 days). Synodic Moon average cycle (29.530587981 days). '
+      Top = 44
+      Width = 140
+      AutoDropDown = True
+      ItemHeight = 15
+      Items.Strings = (
+        'Second'
+        'Minute'
+        'Hour'
+        'Sidereal day'
+        'Day'
+        'Draconic month'
+        'Sidereal month'
+        'Synodic month'
+        'Tropical year'
+      )
+      OnDropDown = unit_comboBoxDropDown
+      ParentShowHint = False
+      ShowHint = True
+      Style = csDropDownList
+      TabOrder = 9
+    end
+    object stepsize2: TEdit
+      Left = 74
+      Height = 23
+      Hint = 'Step size'
+      Top = 44
+      Width = 38
+      Alignment = taCenter
+      TabOrder = 8
+      Text = '999'
+    end
+    object plus_one: TButton
+      Left = 136
+      Height = 25
+      Hint = '+ 1 minute'
+      Top = 0
+      Width = 40
+      AutoSize = True
+      Caption = '+1'
+      OnClick = plus_oneClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+    end
+    object plus_ten: TButton
+      Left = 176
+      Height = 25
+      Hint = '+ 10 minutes'
+      Top = 0
+      Width = 46
+      AutoSize = True
+      Caption = '+10'
+      OnClick = plus_tenClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+    end
+    object minus_one: TButton
+      Left = 90
+      Height = 25
+      Hint = '- 1 minute'
+      Top = 0
+      Width = 37
+      AutoSize = True
+      Caption = '-1'
+      OnClick = minus_oneClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+    end
+    object minus_ten: TButton
+      Left = 56
+      Height = 25
+      Hint = '- 10 minutes'
+      Top = 0
+      Width = 43
+      AutoSize = True
+      Caption = '-10'
+      OnClick = minus_tenClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object minus_2356: TButton
+      Left = 0
+      Height = 25
+      Hint = '- 23:56:04 hours'
+      Top = 0
+      Width = 58
+      AutoSize = True
+      Caption = '-23:56'
+      OnClick = minus_2356Click
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+    object plus_2356: TButton
+      Left = 222
+      Height = 25
+      Hint = '+ 23:56:04 hours'
+      Top = 0
+      Width = 61
+      AutoSize = True
+      Caption = '+23:56'
+      OnClick = plus_2356Click
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+    end
+    object Planetary_tracks: TCheckBox
+      Left = 2
+      Height = 19
+      Hint = 'Show planetary tracks.'
+      Top = 143
+      Width = 106
+      Caption = 'Planetary tracks '
+      OnClick = Planetary_tracksClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 15
+    end
+    object moon_tracks: TCheckBox
+      Left = 2
+      Height = 19
+      Hint = 'Show Moon tracks.'
+      Top = 162
+      Width = 86
+      Caption = 'Moon tracks'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 16
+    end
+    object number_of_steps: TEdit
+      Left = 113
+      Height = 23
+      Hint = 'Number of animation steps'
+      Top = 92
+      Width = 105
+      Alignment = taCenter
+      TabOrder = 13
+      Text = '365'
+    end
+    object forwards_many: TButton
+      Left = 74
+      Height = 27
+      Hint = 'Continous increase.'
+      Top = 92
+      Width = 38
+      Caption = '>>'
+      OnClick = forwardmanyclick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 12
+    end
+    object stop_button: TBitBtn
+      Left = 37
+      Height = 27
+      Hint = 'Click once to stop, second click to return to start position.'
+      Top = 92
+      Width = 35
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000000000000000000000000000000000000FF00FFFF00FF
+        FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF80808080
+        8080808080808080808080FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+        FF00FFFF00FFFF00FF808080FF00FFFF00FFFF00FFFF00FFFF00FF808080FF00
+        FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF808080FF00FFFF00FFFF
+        00FFFF00FFFF00FFFF00FF808080FF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+        FF00FF808080FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF8080
+        80FF00FFFF00FFFF00FFFF00FFFF00FF808080FF00FFFF00FFFF00FFFF00FFFF
+        00FFFF00FFFF00FFFF00FFFF00FF808080FF00FFFF00FFFF00FFFF00FFFF00FF
+        808080FF00FF808080FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF8080
+        80FF00FFFF00FFFF00FFFF00FFFF00FF808080FF00FF808080FF00FFFF00FFFF
+        00FFFF00FFFF00FFFF00FFFF00FF808080FF00FFFF00FFFF00FFFF00FFFF00FF
+        808080FF00FF808080FF00FF808080FF00FF808080FF00FF808080FF00FF8080
+        80FF00FFFF00FFFF00FFFF00FFFF00FFFF00FF808080808080FF00FF808080FF
+        00FF808080FF00FF808080FF00FF808080FF00FFFF00FFFF00FFFF00FFFF00FF
+        FF00FFFF00FF808080FF00FF808080FF00FF808080FF00FF808080FF00FF8080
+        80FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF808080FF00FF808080FF
+        00FF808080FF00FF808080FF00FF808080FF00FFFF00FFFF00FFFF00FFFF00FF
+        FF00FFFF00FF808080FF00FF808080FF00FF808080FF00FF808080808080FF00
+        FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF808080808080FF
+        00FF808080FF00FF808080FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+        FF00FFFF00FFFF00FFFF00FF808080808080808080808080FF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      }
+      OnClick = forwardmanyclick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 11
+    end
+    object backwards_many: TButton
+      Left = 0
+      Height = 27
+      Hint = 'Continous decrease.'
+      Top = 92
+      Width = 35
+      Caption = '<<'
+      OnClick = forwardmanyclick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 10
+    end
+    object continuous: TCheckBox
+      Left = 2
+      Height = 19
+      Hint = 'Continuous animation loop.'
+      Top = 124
+      Width = 82
+      Caption = 'Continuous'
+      OnClick = Planetary_tracksClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 14
+    end
+    object ProgressBar1: TProgressBar
+      Left = 113
+      Height = 7
+      Top = 78
+      Width = 105
+      Smooth = True
+      Step = 1
+      TabOrder = 17
+    end
+  end
+  object object_to_follow: TGroupBox
+    Left = 0
+    Height = 95
+    Hint = ' '
+    Top = 0
+    Width = 287
+    AutoSize = True
+    Caption = 'Object to follow:'
+    ClientHeight = 75
+    ClientWidth = 283
+    Constraints.MinWidth = 287
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    object planetary_ComboBox: TComboBox
+      Left = 100
+      Height = 23
+      Hint = 'Planetary object to follow.'
+      Top = 52
+      Width = 183
+      AutoDropDown = True
+      ItemHeight = 15
+      MaxLength = 30
+      OnChange = planetary_ComboBoxChange
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+    end
+    object followstars: TRadioButton
+      Left = 0
+      Height = 19
+      Hint = 'Diurnal motion off. Stay at same RA&DEC position as time goes by. '
+      Top = 0
+      Width = 45
+      Caption = 'Stars'
+      Checked = True
+      OnClick = followstarsClick
+      TabOrder = 0
+      TabStop = True
+    end
+    object Follow_none: TRadioButton
+      Left = 0
+      Height = 19
+      Hint = 'No tracking, diurnal motion on.'
+      Top = 24
+      Width = 52
+      Caption = 'None '
+      OnClick = followstarsClick
+      TabOrder = 1
+    end
+    object lock_on_name: TCheckBox
+      Left = 0
+      Height = 19
+      Hint = 'Follow a planetary object as time goes by.'
+      Top = 52
+      Width = 69
+      Caption = 'Planetary'
+      OnClick = lock_on_nameClick
+      TabOrder = 2
+    end
+    object sidereal_animationmenu1: TSpeedButton
+      Left = 240
+      Height = 22
+      Top = 0
+      Width = 23
+      AllowAllUp = True
+      Flat = True
+      Glyph.Data = {
+        360C0000424D360C000000000000360000002800000040000000100000000100
+        180000000000000C000064000000640000000000000000000000000000C3C3C3
+        C3C3C3C3C3C3000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000000000
+        00000000000000000000000000000000000000000000000000C0C0C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C0C0000000000000000000000000000000000000C3C3C3
+        C3C3C3C3C3C3C3C3C3000000000000000000000000000000000000C0C0C00000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000C0C0C0000000000000000000000000000000000000C0C0C00000
+        00000000000000000000000000000000000000000000C0C0C000000000000000
+        0000000000000000000000C0C0C0000000000000000000000000000000C3C3C3
+        C3C3C3C3C3C3C3C3C3C3C3C3000000000000000000000000000000000000C0C0
+        C0C0C0C0000000000000000000000000000000000000C3C3C3C3C3C3C3C3C300
+        0000000000000000000000000000000000000000000000000000000000000000
+        C0C0C0C0C0C0000000000000000000000000000000000000000000000000C0C0
+        C0C0C0C0000000000000000000000000C0C0C0C0C0C000000000000000000000
+        0000000000000000000000000000C0C0C0C0C0C0000000000000000000000000
+        C3C3C3C3C3C3C3C3C3C3C3C30000000000000000000000000000000000000000
+        00C0C0C0000000000000000000000000000000C3C3C3000000000000000000C3
+        C3C3000000000000000000000000000000000000000000000000000000000000
+        C0C0C00000000000000000000000000000000000000000000000000000000000
+        00C0C0C0000000000000000000000000C0C0C000000000000000000000000000
+        0000000000000000000000000000000000C0C0C0000000000000000000C0C0C0
+        000000C3C3C3C3C3C3C3C3C3C3C3C3000000000000000000000000C0C0C00000
+        00000000C0C0C0000000000000000000C3C3C300000000000000000000000000
+        0000C3C3C3000000000000000000000000000000000000000000000000C0C0C0
+        000000000000C0C0C0000000000000000000000000000000000000C0C0C00000
+        00000000C0C0C0000000000000C0C0C0000000000000C0C0C000000000000000
+        0000000000000000000000C0C0C0000000000000C0C0C0000000C0C0C0000000
+        000000000000C3C3C3C3C3C3C3C3C3C3C3C3000000000000000000C0C0C00000
+        00000000000000C0C0C0000000000000C3C3C300000000000000000000000000
+        0000C3C3C3000000000000000000000000000000000000000000C0C0C0000000
+        000000000000C0C0C0000000000000000000000000000000000000C0C0C00000
+        00000000000000C0C0C0C0C0C0000000000000000000C0C0C000000000000000
+        0000000000000000000000C0C0C0000000000000000000C0C0C0C0C0C0000000
+        000000000000C0C0C0C3C3C3C3C3C3C3C3C3C3C3C3000000000000C0C0C00000
+        00000000000000C0C0C0000000000000C3C3C300000000000000000000000000
+        0000C3C3C3000000000000000000000000000000000000000000C0C0C0000000
+        000000000000C0C0C0000000000000000000000000000000000000C0C0C00000
+        00000000000000C0C0C0C0C0C0000000000000000000C0C0C000000000000000
+        0000000000000000000000C0C0C0000000000000000000C0C0C0C0C0C0000000
+        000000000000C0C0C0000000C3C3C3C3C3C3C3C3C3C3C3C3000000C0C0C00000
+        00000000000000C0C0C0000000000000000000C3C3C3000000000000000000C3
+        C3C3000000C3C3C3C3C3C3000000000000000000000000000000C0C0C0000000
+        000000000000C0C0C0000000000000C0C0C0C0C0C0000000000000C0C0C00000
+        00000000000000C0C0C0C0C0C0000000000000000000C0C0C0000000000000C0
+        C0C0C0C0C0000000000000C0C0C0000000000000000000C0C0C0C0C0C0000000
+        000000000000C0C0C0000000C0C0C0C3C3C3C3C3C3C3C3C3C3C3C3C0C0C00000
+        00000000000000C0C0C0000000000000000000000000C3C3C3C3C3C3C3C3C300
+        0000C3C3C3000000000000C3C3C3C3C3C3000000000000000000C0C0C0000000
+        000000000000C0C0C0000000C0C0C0000000000000C0C0C0000000C0C0C00000
+        00000000000000C0C0C0C0C0C0000000000000000000C0C0C0000000C0C0C000
+        0000000000C0C0C0000000C0C0C0000000000000000000C0C0C0C0C0C0000000
+        000000000000C0C0C0000000C0C0C0000000C3C3C3C3C3C3C3C3C3C3C3C30000
+        00000000000000C0C0C0000000000000000000000000000000000000000000C3
+        C3C3000000C3C3C3000000000000000000C3C3C3C3C3C3000000C0C0C0000000
+        000000000000C0C0C0000000C0C0C0000000000000C0C0C0000000C0C0C00000
+        00000000000000C0C0C0C0C0C0000000000000000000C0C0C0000000C0C0C000
+        0000000000C0C0C0000000C0C0C0000000000000000000C0C0C0C0C0C0000000
+        000000000000C0C0C0C0C0C0000000000000000000C3C3C3C3C3C3C3C3C3C3C3
+        C3000000000000C0C0C0000000000000000000000000000000000000000000C3
+        C3C3000000000000C3C3C3000000000000000000000000000000C0C0C0000000
+        000000000000C0C0C0C0C0C0000000000000000000000000C0C0C0C0C0C00000
+        00000000000000C0C0C0C0C0C0000000000000000000C0C0C0C0C0C000000000
+        0000000000000000C0C0C0C0C0C0000000000000000000C0C0C0000000C0C0C0
+        000000000000C0C0C0C0C0C0000000000000000000000000C3C3C3C3C3C3C3C3
+        C3C3C3C3C0C0C000000000000000000000000000000000000000000000000000
+        0000C3C3C3000000000000C3C3C3000000000000000000000000000000C0C0C0
+        000000000000C0C0C0C0C0C0000000000000000000000000C0C0C0C0C0C00000
+        00000000C0C0C0000000000000C0C0C0000000000000C0C0C0C0C0C000000000
+        0000000000000000C0C0C0C0C0C0000000000000C0C0C0000000000000000000
+        C0C0C0000000C0C0C0000000000000000000000000000000000000C3C3C3C3C3
+        C3C3C3C3C3C3C300000000000000000000000000000000000000000000000000
+        0000C3C3C3000000000000000000C3C3C3000000000000000000000000000000
+        C0C0C0000000C0C0C0000000000000000000000000000000000000C0C0C00000
+        00C0C0C0000000000000000000000000C0C0C0000000C0C0C000000000000000
+        0000000000000000000000C0C0C0000000C0C0C0000000000000000000000000
+        C0C0C0C0C0C0000000000000000000000000000000000000000000000000C3C3
+        C3C3C3C3C3C3C3C3C3C300000000000000000000000000000000000000000000
+        0000000000C3C3C3000000000000000000000000000000000000000000000000
+        C0C0C0C0C0C0000000000000000000000000000000000000000000000000C0C0
+        C0C0C0C0000000000000000000000000C0C0C0C0C0C000000000000000000000
+        0000000000000000000000000000C0C0C0C0C0C0000000000000000000000000
+        000000000000C0C0C0000000000000000000000000000000000000C0C0C00000
+        00C3C3C3C3C3C3C3C3C300000000000000000000000000000000000000000000
+        0000000000C3C3C3000000000000000000000000000000000000000000000000
+        000000000000C0C0C0000000000000000000000000000000000000C0C0C00000
+        00000000000000000000000000000000000000000000C0C0C000000000000000
+        0000000000000000000000C0C0C0000000000000000000000000000000000000
+        000000000000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000000000
+        00000000C3C3C3C3C3C300000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000000000
+        00000000000000000000000000000000000000000000000000C0C0C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C0C0000000000000000000000000000000
+      }
+      GroupIndex = 1
+      Layout = blGlyphBottom
+      NumGlyphs = 4
+      ParentShowHint = False
+    end
+  end
+  object close_button: TButton
+    Left = 112
+    Height = 27
+    Hint = 'Closes this window.'
+    Top = 408
+    Width = 76
+    Cancel = True
+    Caption = '&Close'
+    ModalResult = 8
+    OnClick = close_buttonClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+  end
+  object eclipse: TGroupBox
+    Left = 0
+    Height = 60
+    Hint = ' '
+    Top = 330
+    Width = 287
+    AutoSize = True
+    Caption = 'Find an eclipse or occultation:'
+    ClientHeight = 40
+    ClientWidth = 283
+    Constraints.MinWidth = 287
+    ParentShowHint = False
+    TabOrder = 2
+    object eclipsebackwards: TButton
+      Left = 0
+      Height = 27
+      Hint = 'Find an eclipse in the past.'
+      Top = 11
+      Width = 42
+      Caption = '<<'
+      OnClick = eclipsefind
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+    object eclipseforwards: TButton
+      Left = 46
+      Height = 27
+      Hint = 'Find an eclipse in future.'
+      Top = 11
+      Width = 42
+      Caption = '>>'
+      OnClick = eclipsefind
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object Solar_eclipse1: TRadioButton
+      Left = 102
+      Height = 19
+      Hint = ' '
+      Top = 0
+      Width = 46
+      Caption = 'Solar'
+      OnClick = Solar_eclipse1Click
+      TabOrder = 2
+    end
+    object Lunar_eclipse1: TRadioButton
+      Left = 102
+      Height = 19
+      Top = 21
+      Width = 50
+      Caption = 'Lunar'
+      Checked = True
+      OnClick = Solar_eclipse1Click
+      TabOrder = 3
+      TabStop = True
+    end
+    object moon_eclipse_with1: TLabel
+      Left = 263
+      Height = 15
+      Top = 23
+      Width = 6
+      Alignment = taRightJustify
+      Caption = '  '
+      ParentColor = False
+    end
+  end
+end

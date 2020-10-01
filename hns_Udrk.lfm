@@ -1,0 +1,244 @@
+object darkform: Tdarkform
+  Left = 656
+  Height = 548
+  Top = 37
+  Width = 528
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'darkform'
+  ClientHeight = 548
+  ClientWidth = 528
+  Color = clBtnFace
+  KeyPreview = True
+  OnActivate = FormActivate
+  OnKeyPress = FormKeyPress
+  OnPaint = FormPaint
+  OnShow = FormShow
+  Position = poOwnerFormCenter
+  LCLVersion = '2.0.6.0'
+  object Bevel_hour: TBevel
+    Left = 64
+    Height = 21
+    Hint = 'Local time from 17:45 in the evening till 06:15 in the morning.'
+    Top = 4
+    Width = 457
+    ParentShowHint = False
+    Shape = bsFrame
+    ShowHint = True
+  end
+  object Bevel_day: TBevel
+    Left = 4
+    Height = 484
+    Hint = 'Local date from today till 31 days in the future.'
+    Top = 24
+    Width = 62
+    ParentShowHint = False
+    Shape = bsFrame
+    ShowHint = True
+  end
+  object Bevel_main: TBevel
+    Left = 64
+    Height = 485
+    Hint = 'If yellow the  Moon is shining, white is daylight and  if black  the Sun is 18 degrees below horizon.'
+    Top = 23
+    Width = 457
+    ParentShowHint = False
+    Shape = bsFrame
+    ShowHint = True
+  end
+  object help_darkmenu: TLabel
+    Cursor = crHandPoint
+    Left = 512
+    Height = 17
+    Hint = 'Help'
+    Top = 520
+    Width = 6
+    Caption = '?'
+    Color = clBtnFace
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -13
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsUnderline]
+    ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    Transparent = False
+    OnClick = help_darkmenuClick
+  end
+  object ok: TButton
+    Left = 296
+    Height = 25
+    Hint = 'Leave this window.'
+    Top = 516
+    Width = 99
+    Cancel = True
+    Caption = 'Ok'
+    OnClick = okClick
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+  end
+  object to_clipboard: TButton
+    Left = 400
+    Height = 25
+    Hint = 'Copy window to Windows clipboard.  (To paste it in your favourite wordprocessor or drawing program)'
+    Top = 516
+    Width = 105
+    Caption = 'To  clipboard'
+    OnClick = to_clipboardClick
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+  end
+  object col_nautical1: TLabel
+    Left = 115
+    Height = 22
+    Hint = 'Nautical twilight color. Click to change color. '
+    Top = 520
+    Width = 46
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Nautical'
+    Color = clFuchsia
+    Font.Color = clWindow
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    Transparent = False
+    OnClick = col_astro1Click
+  end
+  object nautical_end1: TEdit
+    Left = 217
+    Height = 22
+    Hint = 'Begin of astronomical darkness. Defined as when the center of the Sun is geometrically 18 degrees below the horizon or zenith distance of the centre of the Sun''s disk is 108°'
+    Top = 520
+    Width = 43
+    Alignment = taCenter
+    AutoSize = False
+    BorderStyle = bsNone
+    Color = clBlack
+    Font.Color = clHighlightText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    OnChange = FormPaint
+    OnClick = FormPaint
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+    Text = '-18'
+  end
+  object col_astro1: TLabel
+    Left = 167
+    Height = 22
+    Hint = 'Astronomical twilight color. Click to change color. '
+    Top = 520
+    Width = 46
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Astro'
+    Color = clGray
+    Font.Color = clWindow
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    Transparent = False
+    OnClick = col_astro1Click
+  end
+  object col_civil_twilight1: TLabel
+    Left = 64
+    Height = 22
+    Hint = 'Civil twilight color. Click to change color. '
+    Top = 520
+    Width = 46
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Civil'
+    Color = clRed
+    Font.Color = clWindow
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    Transparent = False
+    OnClick = col_astro1Click
+  end
+  object backward1: TLabel
+    Cursor = crHandPoint
+    Left = 30
+    Height = 25
+    Hint = 'Day backward'
+    Top = -2
+    Width = 8
+    Anchors = [akTop, akLeft, akRight]
+    Caption = '↑'
+    Color = clBtnFace
+    Font.Color = clBlue
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    Transparent = False
+    OnClick = backward1Click
+  end
+  object forward1: TLabel
+    Cursor = crHandPoint
+    Left = 30
+    Height = 25
+    Hint = 'Day forward'
+    Top = 513
+    Width = 8
+    Anchors = [akTop, akLeft, akRight]
+    Caption = '↓↓'
+    Color = clBtnFace
+    Font.Color = clBlue
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    Transparent = False
+    OnClick = forward1Click
+  end
+  object ColorDialog1: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 380
+    top = 440
+  end
+end
